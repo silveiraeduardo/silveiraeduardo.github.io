@@ -6,7 +6,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>eduardo silveira | vamos conversar?</title>
+        <title>Eduardo Silveira • UX designer</title>
         <meta name="description" content="soluções e interfaces que resolvem problemas" />
         <link rel="canonical" href={process.env.NEXT_PUBLIC_URL} />
 
