@@ -4,8 +4,8 @@ import Box from '~@system/Box';
 import { useDesktop } from '~@system/utils/useDesktop';
 import { useMatchMedia } from '~@system/utils/useMatchMedia';
 import Avatar, { AvatarProps } from '../Avatar';
-import eduDark from '~/images/Eduardo Silveira.png';
-import eduLight from '~/images/Eduardo Silveira lightmode.png';
+import eduDark from '~/images/Eduardo_Silveira.png';
+import eduLight from '~/images/Eduardo_Silveira_lightmode.png';
 import { root } from './Header.css';
 import SilveiraIcon from '../SilveiraIcon';
 
