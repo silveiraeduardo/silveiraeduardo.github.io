@@ -6,8 +6,8 @@ module.exports = {
     },
     upload: {
       target: 'filesystem',
-      outputDir: 'out',
-      reportFilenamePattern: "lhci.report.%%EXTENSION%%"
+      outputDir: 'out/lhci',
+      reportFilenamePattern: "index.%%EXTENSION%%"
     },
   },
 };
