@@ -40,6 +40,14 @@ jobs:
         run: |
           touch ./out/.nojekyll;
           echo "${{ secrets.PUBLIC_URL }}" > ./out/CNAME;
+          
+      - name : Install lighthouse-ci
+        run: pnpm install --global @lhci/cli@0.8.x
+        continue-on-error: true
+      
+      - name: run Lighthouse CI
+        run: lhci autorun
+        continue-on-error: true
 
       - name: Upload Artifacts 🔺 # The project is then uploaded as an artifact named 'site'.
         uses: actions/upload-artifact@v1
