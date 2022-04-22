@@ -4,6 +4,10 @@
 
 > [silveiraeduardo.github.io](https://silveiraeduardo.github.io/)
 
+## Performance
+
+> [Lighthouse](https://silveiraeduardo.github.io/lhci/)
+
 ## Getting Started
 
 1. Install Dependencies
