@@ -7,8 +7,8 @@ const isProd = process.env.NODE_ENV === 'production';
 const ContentSecurityPolicy = `
   default-src 'self';
   script-src 'self';
-  child-src example.com;
-  style-src 'self' example.com;
+  child-src eduardosilveira.com;
+  style-src 'self' eduardosilveira.com;
   font-src 'self';
 `;
 
