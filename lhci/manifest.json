@@ -5,9 +5,9 @@
     "htmlPath": "/home/runner/work/silveiraeduardo.github.io/silveiraeduardo.github.io/out/lhci/index.html",
     "jsonPath": "/home/runner/work/silveiraeduardo.github.io/silveiraeduardo.github.io/out/lhci/index.json",
     "summary": {
-      "performance": 0.93,
+      "performance": 0.94,
       "accessibility": 1,
-      "best-practices": 0.87,
+      "best-practices": 0.8,
       "seo": 0.93,
       "pwa": 0.4
     }
@@ -20,7 +20,7 @@
     "summary": {
       "performance": 0.94,
       "accessibility": 1,
-      "best-practices": 0.87,
+      "best-practices": 0.8,
       "seo": 0.93,
       "pwa": 0.4
     }
@@ -33,7 +33,7 @@
     "summary": {
       "performance": 0.94,
       "accessibility": 1,
-      "best-practices": 0.87,
+      "best-practices": 0.8,
       "seo": 0.93,
       "pwa": 0.4
     }
