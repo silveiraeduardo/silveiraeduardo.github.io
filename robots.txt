@@ -1,2 +1,9 @@
+# *
 User-agent: *
-Allow: *
+Allow: /
+
+# Host
+Host: https://eduardosilveira.com
+
+# Sitemaps
+Sitemap: https://eduardosilveira.com/sitemap.xml
