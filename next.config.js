@@ -10,6 +10,7 @@ const ContentSecurityPolicy = `
   child-src eduardosilveira.com;
   style-src 'self' eduardosilveira.com;
   font-src 'self';
+  img-src * 'self' data: https: http: ;
 `;
 
 const securityHeaders = [
