@@ -1,12 +1,17 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { tokens } from '~@styles/theme.css';
+import { GTM_ID } from '~@utils/gtm';
 
 class MyDocument extends Document {
   render() {
     return (
       <Html lang="pt-br">
         <Head>
-          <meta httpEquiv='Content-Security-Policy' content="default-src 'self' ; script-src 'self' 'unsafe-inline' *.eduardosilveira.com; style-src 'self' 'unsafe-inline' *.eduardosilveira.com; img-src 'self' data: https: http: ; media-src 'self' ; frame-src eduardosilveira.com;" />
+          <meta
+            httpEquiv="Content-Security-Policy"
+            content="default-src 'self' ; script-src 'self' 'unsafe-inline' *.eduardosilveira.com *.googletagmanager.com; style-src 'self' 'unsafe-inline' *.eduardosilveira.com; img-src 'self' data: https: http: ; media-src 'self' ; frame-src eduardosilveira.com googletagmanager.com;"
+          />
+
           <meta name="msapplication-TileColor" content={tokens.colors.primary} />
           <meta name="theme-color" content={tokens.colors.primary} />
           <link rel="apple-touch-icon" sizes="76x76" href={`${process.env.NEXT_PUBLIC_URL}/apple-touch-icon.png`} />
@@ -32,6 +37,16 @@ class MyDocument extends Document {
           <link href={`${process.env.NEXT_PUBLIC_URL}/fonts.css`} rel="stylesheet" />
         </Head>
         <body>
+          {GTM_ID && (
+            <noscript>
+              <iframe
+                src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+                height="0"
+                width="0"
+                style={{ display: 'none', visibility: 'hidden' }}
+              />
+            </noscript>
+          )}
           <Main />
           <NextScript />
         </body>

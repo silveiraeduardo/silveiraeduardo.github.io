@@ -6,11 +6,12 @@ const isProd = process.env.NODE_ENV === 'production';
 
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self';
+  script-src 'self' 'unsafe-inline' eduardosilveira.com googletagmanager.com;
   child-src eduardosilveira.com;
-  style-src 'self' eduardosilveira.com;
+  style-src 'self' 'unsafe-inline' eduardosilveira.com;
   font-src 'self';
   img-src * 'self' data: https: http: ;
+  frame-src 'self' googletagmanager.com;
 `;
 
 const securityHeaders = [
