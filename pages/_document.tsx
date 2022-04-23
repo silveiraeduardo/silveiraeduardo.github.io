@@ -9,7 +9,7 @@ class MyDocument extends Document {
         <Head>
           <meta
             httpEquiv="Content-Security-Policy"
-            content="default-src 'self' ; script-src 'self' 'unsafe-inline' *.eduardosilveira.com *.googletagmanager.com; style-src 'self' 'unsafe-inline' *.eduardosilveira.com; img-src 'self' data: https: http: ; media-src 'self' ; frame-src eduardosilveira.com googletagmanager.com;"
+            content="default-src 'self' ; script-src 'self' 'unsafe-inline' *.eduardosilveira.com *.googletagmanager.com; style-src 'self' 'unsafe-inline' googletagmanager.com *.googleapis.com *.eduardosilveira.com; img-src 'self' data: https: http: ; media-src 'self' ; frame-src eduardosilveira.com googletagmanager.com;"
           />
 
           <meta name="msapplication-TileColor" content={tokens.colors.primary} />
