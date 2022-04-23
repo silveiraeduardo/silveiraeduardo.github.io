@@ -5,11 +5,11 @@
     "htmlPath": "/home/runner/work/silveiraeduardo.github.io/silveiraeduardo.github.io/out/lhci/index.html",
     "jsonPath": "/home/runner/work/silveiraeduardo.github.io/silveiraeduardo.github.io/out/lhci/index.json",
     "summary": {
-      "performance": 0.76,
-      "accessibility": 0.97,
-      "best-practices": 0.88,
+      "performance": 0.94,
+      "accessibility": 1,
+      "best-practices": 0.87,
       "seo": 0.93,
-      "pwa": 0.9
+      "pwa": 0.4
     }
   },
   {
@@ -18,11 +18,11 @@
     "htmlPath": "/home/runner/work/silveiraeduardo.github.io/silveiraeduardo.github.io/out/lhci/index.html",
     "jsonPath": "/home/runner/work/silveiraeduardo.github.io/silveiraeduardo.github.io/out/lhci/index.json",
     "summary": {
-      "performance": 0.99,
-      "accessibility": 0.97,
-      "best-practices": 0.88,
+      "performance": 0.94,
+      "accessibility": 1,
+      "best-practices": 0.87,
       "seo": 0.93,
-      "pwa": 0.9
+      "pwa": 0.4
     }
   },
   {
@@ -31,11 +31,11 @@
     "htmlPath": "/home/runner/work/silveiraeduardo.github.io/silveiraeduardo.github.io/out/lhci/index.html",
     "jsonPath": "/home/runner/work/silveiraeduardo.github.io/silveiraeduardo.github.io/out/lhci/index.json",
     "summary": {
-      "performance": 0.99,
-      "accessibility": 0.97,
-      "best-practices": 0.88,
+      "performance": 0.94,
+      "accessibility": 1,
+      "best-practices": 0.87,
       "seo": 0.93,
-      "pwa": 0.9
+      "pwa": 0.4
     }
   }
 ]
