@@ -6,7 +6,7 @@ class MyDocument extends Document {
     return (
       <Html lang="pt-br">
         <Head>
-          <meta http-equiv='Content-Security-Policy' content="default-src 'self' ; script-src 'self' 'unsafe-inline' *.eduardosilveira.com; style-src 'self' 'unsafe-inline' *.eduardosilveira.com; img-src 'self' *; media-src 'self' ; frame-src eduardosilveira.com;" />
+          <meta httpEquiv='Content-Security-Policy' content="default-src 'self' ; script-src 'self' 'unsafe-inline' *.eduardosilveira.com; style-src 'self' 'unsafe-inline' *.eduardosilveira.com; img-src 'self' *; media-src 'self' ; frame-src eduardosilveira.com;" />
           <meta name="msapplication-TileColor" content={tokens.colors.primary} />
           <meta name="theme-color" content={tokens.colors.primary} />
           <link rel="apple-touch-icon" sizes="76x76" href={`${process.env.NEXT_PUBLIC_URL}/apple-touch-icon.png`} />
