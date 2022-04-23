@@ -4,6 +4,7 @@
 
 > [![Build and Deploy](https://github.com/silveiraeduardo/silveiraeduardo.github.io/actions/workflows/github-actions.yml/badge.svg)](https://github.com/silveiraeduardo/silveiraeduardo.github.io/actions/workflows/github-actions.yml)
 
+> [![Security](https://github.githubassets.com/images/modules/site/icons/security.svg)]
 > [![CodeQL](https://github.com/silveiraeduardo/silveiraeduardo.github.io/actions/workflows/codeql-analysis.yml/badge.svg?branch=main)](https://github.com/silveiraeduardo/silveiraeduardo.github.io/actions/workflows/codeql-analysis.yml)
 
 ## Url
