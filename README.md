@@ -2,6 +2,8 @@
 
 [![Build and Deploy](https://github.com/silveiraeduardo/silveiraeduardo.github.io/actions/workflows/github-actions.yml/badge.svg?branch=main)](https://github.com/silveiraeduardo/silveiraeduardo.github.io/actions/workflows/github-actions.yml)
 
+[![CodeQL](https://github.com/silveiraeduardo/silveiraeduardo.github.io/actions/workflows/codeql-analysis.yml/badge.svg?branch=main)](https://github.com/silveiraeduardo/silveiraeduardo.github.io/actions/workflows/codeql-analysis.yml)
+
 > [silveiraeduardo.github.io](https://silveiraeduardo.github.io/)
 
 ## Performance
