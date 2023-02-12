@@ -5,6 +5,7 @@ import { tokens } from '~@styles/theme.css';
 export const root = style(
   {
     marginBottom: '15px',
+    marginRight: '1rem',
     '@media': {
       ...down(tokens.breakpoints.xl, {
         vars: {

@@ -26,7 +26,7 @@ export const artifact = style(
     borderBottomColor: 'transparent',
     marginRight: '30px',
     '@media': {
-      ...up(tokens.breakpoints.lg, {
+      ...up(tokens.breakpoints.md, {
         vars: {
           width: '60px',
           height: '122px',

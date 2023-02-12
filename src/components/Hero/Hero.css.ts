@@ -12,7 +12,7 @@ export const root = style(
     maxWidth: '100vw',
     marginBottom: '48px',
     '@media': {
-      ...up(tokens.breakpoints.lg, {
+      ...up(tokens.breakpoints.md, {
         flexDirection: 'row',
         justifyContent: 'flex-start',
       }),

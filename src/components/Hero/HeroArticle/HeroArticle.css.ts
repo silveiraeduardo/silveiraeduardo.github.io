@@ -4,16 +4,16 @@ import { tokens } from '~@styles/theme.css';
 
 export const article = style(
   {
+    marginTop: '29px',
     '@media': {
-      ...up(tokens.breakpoints.lg, {
+      ...up(tokens.breakpoints.md, {
         vars: {
           width: '100%',
           height: 'auto',
           maxWidth: '974px',
           fontSize: '26px',
           lineHeight: '36px',
-          marginLeft: '63px',
-          padding: '27px',
+          marginTop: '61px',
         },
       }),
     },
@@ -22,9 +22,8 @@ export const article = style(
 );
 
 globalStyle(`${article} p`, {
-  marginBottom: '28px',
   '@media': {
-    ...up(tokens.breakpoints.lg, {
+    ...up(tokens.breakpoints.md, {
       vars: {
         marginBottom: '22px',
         letterSpacing: '-1px',

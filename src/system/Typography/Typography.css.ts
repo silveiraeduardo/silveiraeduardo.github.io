@@ -84,7 +84,7 @@ export const variants = styleVariants(
         fontWeight: 300,
         '@media': {
           ...typography.text['@media'],
-          ...up(tokens.breakpoints.lg, {
+          ...up(tokens.breakpoints.md, {
             fontSize: '22px',
             lineHeight: '36px',
           }),
@@ -98,9 +98,26 @@ export const variants = styleVariants(
         fontSize: '12px',
         '@media': {
           ...typography.text['@media'],
-          ...up(tokens.breakpoints.lg, {
+          ...up(tokens.breakpoints.md, {
             fontSize: '18px',
             lineHeight: '36px',
+            fontStyle: 'normal',
+            fontWeight: 500,
+            letterSpacing: 0,
+          }),
+        },
+      },
+    ],
+    span: [
+      base,
+      {
+        ...typography.text,
+        fontSize: '12px',
+        '@media': {
+          ...typography.text['@media'],
+          ...up(tokens.breakpoints.md, {
+            fontSize: '14px',
+            lineHeight: '18px',
             fontStyle: 'normal',
             fontWeight: 500,
             letterSpacing: 0,

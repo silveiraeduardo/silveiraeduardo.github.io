@@ -1,6 +1,10 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Image from 'next/image';
 import { Layout } from '~@templates';
+import * as classes from './Home/Home.css';
+import ArrowIcon from '~@components/icons/ArrowIcon';
+import { Timeline } from '~@components';
 
 const Home: NextPage = () => {
   return (
@@ -26,7 +30,21 @@ const Home: NextPage = () => {
         <meta property="og:url" content={process.env.NEXT_PUBLIC_URL} />
         <meta property="og:image" content={`${process.env.NEXT_PUBLIC_URL}/apple-touch-icon.png`} />
       </Head>
-      <Layout />
+      <Layout>
+        <section className={classes.root}>
+          {/* <div className={classes.background}>
+            <Image src="/images/Eduardo_Silveira_tragetoria.png" width={1497} height={380} alt="Tragetória" />
+          </div>
+          <ArrowIcon
+            className={classes.arrowDown}
+            variant="down"
+            width="35px"
+            height="35px"
+            viewBox="0 0 91.031 91.031"
+          /> */}
+          <Timeline />
+        </section>
+      </Layout>
     </>
   );
 };

@@ -11,7 +11,7 @@ export const root = style(
     letterSpacing: '-2px',
     marginBottom: '24px',
     '@media': {
-      ...up(tokens.breakpoints.lg, {
+      ...up(tokens.breakpoints.md, {
         vars: {
           maxWidth: '907px',
           lineHeight: '9rem',
@@ -80,6 +80,7 @@ export const problems = style(
     backgroundImage: `url("${process.env.NEXT_PUBLIC_URL}/svg/problemas.svg")`,
     backgroundRepeat: 'no-repeat',
     backgroundPosition: '50% 100%',
+    backgroundSize: 'contain',
     '@media': {
       ...down(tokens.breakpoints.xl, {
         vars: {

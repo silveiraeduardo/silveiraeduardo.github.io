@@ -4,20 +4,21 @@ import { tokens, vars } from '~@styles/theme.css';
 
 export const root = style(
   {
+    display: 'inline-flex',
+    justifyContent: 'center',
+    alignItems: 'center',
     borderRadius: '30px',
     height: '40px',
     fontSize: '18px',
     lineHeight: '15px',
-    padding: '8px 18px 11px 19px',
     cursor: 'pointer',
     opacity: 0.85,
     '@media': {
-      ...up(tokens.breakpoints.lg, {
+      ...up(tokens.breakpoints.md, {
         vars: {
-          height: '60px',
+          height: '52px',
           fontSize: '24px',
           lineHeight: '22px',
-          padding: '13px 29px 18px',
         },
       }),
     },
@@ -48,9 +49,36 @@ export const variants = styleVariants(
             color: vars.colors.background,
           },
         },
-        ...up(tokens.breakpoints.lg, {
+        ...up(tokens.breakpoints.md, {
           vars: {
             border: `solid 2px ${vars.colors.primary}`,
+          },
+        }),
+      },
+      ':hover': {
+        opacity: 1,
+        backgroundColor: vars.colors.primary,
+        color: vars.colors.text,
+        content: '',
+      },
+    },
+    floated: {
+      borderRadius: '39px',
+      boxShadow: '0px 12px 24px #FFFFFF4F',
+
+      '@media': {
+        '(prefers-color-scheme: light)': {
+          vars: {
+            boxShadow: '0px 12px 24px #0000001F',
+            backgroundColor: vars.colors.background,
+            color: vars.colors.background,
+          },
+        },
+        ...up(tokens.breakpoints.md, {
+          vars: {
+            height: '60px',
+            fontSize: '14px',
+            lineHeight: 'unset',
           },
         }),
       },

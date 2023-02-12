@@ -9,7 +9,7 @@ export const typography = {
     fontWeight: 400,
     letterSpacing: 0,
     '@media': {
-      ...up(tokens.breakpoints.lg, {
+      ...up(tokens.breakpoints.md, {
         fontSize: '26px',
         lineHeight: '36px',
       }),
@@ -22,7 +22,7 @@ export const typography = {
     fontStyle: 'normal',
     letterSpacing: 0,
     '@media': {
-      ...up(tokens.breakpoints.lg, {
+      ...up(tokens.breakpoints.md, {
         fontSize: '24px',
         lineHeight: '22px',
       }),
@@ -33,7 +33,7 @@ export const typography = {
       fontSize: '48px',
       lineHeight: '54px',
       '@media': {
-        ...up(tokens.breakpoints.lg, {
+        ...up(tokens.breakpoints.md, {
           fontSize: '108px',
           lineHeight: '118px',
         }),
