@@ -7,15 +7,15 @@ import { imageContainer, image, root, textContainer, text } from './Avatar.css';
 
 export type AvatarProps = React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> & {
   src: string;
-  width: string;
-  height: string;
+  width: number;
+  height: number;
 };
 
 const Avatar: React.FC<AvatarProps> = ({ width, height, src, className, children, ...rest }) => {
   return (
     <Box as="span" className={clsx(root, className)} {...rest}>
       <Box as="span" className={clsx(imageContainer)}>
-        <Image className={clsx(image)} width={width} height={height} src={src} alt={children?.toString()} />{' '}
+        <Image className={clsx(image)} width={width} height={height} src={src} alt={String(children?.toString())} />{' '}
       </Box>
       <Box as="span" className={clsx(textContainer)}>
         <Typography className={clsx(text)}>{children}</Typography>

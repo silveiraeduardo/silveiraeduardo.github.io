@@ -1,8 +1,13 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { Layout } from '~@templates';
+import * as classes from '~@styles/pages/Home.css';
+import { ArrowCurveRightIcon, ArrowDownIcon, Timeline } from '~@components';
+import clsx from 'clsx';
+import { useDesktop } from '~@system';
 
 const Home: NextPage = () => {
+  const isDesktop = useDesktop();
   return (
     <>
       <Head>
@@ -26,7 +31,17 @@ const Home: NextPage = () => {
         <meta property="og:url" content={process.env.NEXT_PUBLIC_URL} />
         <meta property="og:image" content={`${process.env.NEXT_PUBLIC_URL}/apple-touch-icon.png`} />
       </Head>
-      <Layout />
+      <Layout>
+        <section className={clsx(classes.root, classes.timeLineSection)}>
+          {isDesktop && (
+            <>
+              <ArrowCurveRightIcon className={clsx(classes.arrowCurve)} />
+              <ArrowDownIcon className={clsx(classes.arrow)} />
+            </>
+          )}
+          <Timeline />
+        </section>
+      </Layout>
     </>
   );
 };

@@ -15,22 +15,16 @@ export const root = style(
       marginBottom: '0',
       marginLeft: 'auto',
       '@media': {
-        ...up(tokens.breakpoints.lg, {
+        ...up(tokens.breakpoints.md, {
           vars: {
             maxWidth: '425px',
+            height: '378px',
           },
         }),
       },
     },
   ],
   'anchor',
-);
-
-export const arrowDown = style(
-  {
-    marginLeft: 'auto',
-  },
-  'arrowDown',
 );
 
 export const divider = style(
@@ -40,7 +34,7 @@ export const divider = style(
     maxWidth: '316px',
     margin: '12px 0',
     '@media': {
-      ...up(tokens.breakpoints.lg, {
+      ...up(tokens.breakpoints.md, {
         vars: {
           maxWidth: '425px',
           margin: '22px 0 22px auto',
@@ -65,7 +59,7 @@ globalStyle(`${root} ${text}`, {
   height: '14px',
   lineHeight: '1',
   '@media': {
-    ...up(tokens.breakpoints.lg, {
+    ...up(tokens.breakpoints.md, {
       vars: {
         height: '21px',
       },

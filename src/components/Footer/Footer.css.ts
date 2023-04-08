@@ -12,6 +12,12 @@ export const root = style(
     flexWrap: 'wrap',
     maxWidth: '100vw',
     alignItems: 'flex-start',
+    padding: '27px 27px 0',
+    '@media': {
+      ...up(tokens.breakpoints.md, {
+        padding: '122px 140px',
+      }),
+    },
   },
   'root',
 );
@@ -26,7 +32,7 @@ export const artifact = style(
     borderBottomColor: 'transparent',
     marginRight: '30px',
     '@media': {
-      ...up(tokens.breakpoints.lg, {
+      ...up(tokens.breakpoints.md, {
         vars: {
           width: '60px',
           height: '122px',

@@ -4,10 +4,8 @@ import Box from '~@system/Box';
 import { useDesktop } from '~@system/utils/useDesktop';
 import { useMatchMedia } from '~@system/utils/useMatchMedia';
 import Avatar, { AvatarProps } from '../Avatar';
-import eduDark from '~/images/Eduardo_Silveira.png';
-import eduLight from '~/images/Eduardo_Silveira_lightmode.png';
 import { root } from './Header.css';
-import SilveiraIcon from '../SilveiraIcon';
+import SilveiraIcon from '../icons/SilveiraIcon';
 
 export type HeaderProps = DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>;
 
@@ -16,9 +14,9 @@ const Header: FC<HeaderProps> = ({ className, ...rest }) => {
   const isDesktop = useDesktop();
   const avatarProps = useMemo<AvatarProps>(() => {
     return {
-      src: isDarkMode ? eduDark.src : eduLight.src,
-      width: isDesktop ? '50px' : '34px',
-      height: isDesktop ? '50px' : '34px',
+      src: isDarkMode ? '/images/Eduardo_Silveira.png' : '/images/Eduardo_Silveira--lightmode.png',
+      width: isDesktop ? 50 : 34,
+      height: isDesktop ? 50 : 34,
     } as AvatarProps;
   }, [isDarkMode, isDesktop]);
   return (

@@ -2,5 +2,5 @@
 
 module.exports = {
   siteUrl: process.env.PUBLIC_URL,
-  generateRobotsTxt: true
-}
+  generateRobotsTxt: true,
+};

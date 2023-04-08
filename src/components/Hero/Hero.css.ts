@@ -11,10 +11,12 @@ export const root = style(
     flexWrap: 'wrap',
     maxWidth: '100vw',
     marginBottom: '48px',
+    padding: '27px 27px 0',
     '@media': {
-      ...up(tokens.breakpoints.lg, {
+      ...up(tokens.breakpoints.md, {
         flexDirection: 'row',
         justifyContent: 'flex-start',
+        padding: '0 140px',
       }),
     },
   },

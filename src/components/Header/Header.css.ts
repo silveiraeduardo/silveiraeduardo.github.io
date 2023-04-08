@@ -12,10 +12,12 @@ export const root = style(
     flexWrap: 'wrap',
     maxWidth: '100vw',
     alignItems: 'center',
-    marginBottom: '48px',
+    marginBottom: '32px',
+    padding: '27px 27px 0',
     '@media': {
-      ...up(tokens.breakpoints.lg, {
-        marginBottom: '80px',
+      ...up(tokens.breakpoints.md, {
+        marginBottom: '64px',
+        padding: '122px 140px',
       }),
     },
   },

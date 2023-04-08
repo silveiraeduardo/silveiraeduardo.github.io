@@ -27,7 +27,7 @@ export const text = style({
   color: vars.colors.caption,
   fontSize: '20px',
   '@media': {
-    ...up(tokens.breakpoints.lg, {
+    ...up(tokens.breakpoints.md, {
       vars: {
         fontSize: '26px',
       },

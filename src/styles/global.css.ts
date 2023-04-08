@@ -24,9 +24,11 @@ globalStyle('body', {
   height: 'auto',
 });
 
+globalStyle('a, a:visited', {
+  color: vars.colors.primary,
+});
+
 globalStyle('a, a:-webkit-any-link', {
-  fontSize: '20px',
-  lineHeight: '28px',
   fontStyle: 'normal',
   fontWeight: '500',
   letterSpacing: 0,
@@ -35,9 +37,7 @@ globalStyle('a, a:-webkit-any-link', {
   '@media': {
     ...foregroundColorSchema['@media'],
     ...down(tokens.breakpoints.md, { color: vars.colors.primary }),
-    ...up(tokens.breakpoints.lg, {
-      fontSize: '26px',
-      lineHeight: '36px',
+    ...up(tokens.breakpoints.md, {
       fontStyle: 'normal',
       fontWeight: '500',
       letterSpacing: 0,
@@ -47,7 +47,7 @@ globalStyle('a, a:-webkit-any-link', {
 
 globalStyle('a:hover', {
   '@media': {
-    ...up(tokens.breakpoints.lg, {
+    ...up(tokens.breakpoints.md, {
       color: vars.colors.primary,
     }),
   },
@@ -84,6 +84,7 @@ globalStyle('h1', {
 });
 
 globalStyle('#__next', {
+  overflow: 'hidden',
   display: 'flex',
   flexWrap: 'wrap',
   justifyContent: 'center',
@@ -92,12 +93,12 @@ globalStyle('#__next', {
   minHeight: '100vh',
   maxWidth: '100vw',
   margin: '0 auto',
-  padding: '27px 27px 0',
+  // padding: '27px 27px 0',
   '@media': {
-    ...up(tokens.breakpoints.lg, {
+    ...up(tokens.breakpoints.md, {
       vars: {
         maxWidth: '1855px',
-        padding: '27px 140px 0',
+        // padding: '122px 140px',
       },
     }),
   },

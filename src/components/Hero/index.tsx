@@ -6,6 +6,7 @@ import HeroArticle from './HeroArticle';
 import HeroCTA from './HeroCTA';
 import HeroFooter from './HeroFooter';
 import HeroTitle from './HeroTitle';
+import HeroLinkedIn from './HeroLinkedIn';
 
 const Hero: VFC = () => {
   return (
@@ -18,5 +19,5 @@ const Hero: VFC = () => {
   );
 };
 
-export { HeroArticle, HeroCTA, HeroTitle, HeroFooter };
+export { HeroArticle, HeroCTA, HeroTitle, HeroFooter, HeroLinkedIn };
 export default Hero;

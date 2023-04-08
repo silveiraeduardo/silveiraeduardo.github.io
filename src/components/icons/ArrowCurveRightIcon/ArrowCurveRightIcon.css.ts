@@ -5,6 +5,7 @@ import { tokens } from '~@styles/theme.css';
 export const root = style(
   {
     marginBottom: '15px',
+    marginRight: '1rem',
     '@media': {
       ...down(tokens.breakpoints.xl, {
         vars: {
@@ -18,20 +19,7 @@ export const root = style(
 
 export const variants = styleVariants({
   right: [root, {}],
-  down: [
-    root,
-    {
-      transform: 'rotate(90deg)',
-      marginBottom: '0',
-      '@media': {
-        ...down(tokens.breakpoints.xl, {
-          vars: {
-            marginBottom: '0',
-          },
-        }),
-      },
-    },
-  ],
+  down: [root, {}],
   left: [root, {}],
   up: [root, {}],
 });

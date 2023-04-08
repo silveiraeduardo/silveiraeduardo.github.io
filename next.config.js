@@ -1,12 +1,24 @@
 const { createVanillaExtractPlugin } = require('@vanilla-extract/next-plugin');
 const withVanillaExtract = createVanillaExtractPlugin();
-const withPWA = require('next-pwa');
+
+const runtimeCaching = require('next-pwa/cache');
 
 const isProd = process.env.NODE_ENV === 'production';
 
+const withPWA = require('next-pwa')({
+  dest: 'public',
+  disable: !isProd,
+  scope: process.env.BASE_PATH,
+  register: isProd,
+  skipWaiting: true,
+  runtimeCaching,
+  buildExcludes: [/middleware-manifest.json$/],
+});
+
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-inline' eduardosilveira.com googletagmanager.com;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' eduardosilveira.com googletagmanager.com;
+  worker-src eduardosilveira.com;
   child-src eduardosilveira.com;
   style-src 'self' 'unsafe-inline' eduardosilveira.com;
   font-src 'self';
@@ -55,28 +67,22 @@ const nextConfig = {
   swcMinify: true,
   productionBrowserSourceMaps: isProd,
   basePath: isProd ? process.env.BASE_PATH : '',
-  pwa: {
-    dest: 'public',
-    disable: !isProd,
-    scope: process.env.BASE_PATH,
-    register: true,
-  },
   trailingSlash: true,
   reactStrictMode: true,
-  webpack5: true,
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
       use: ['@svgr/webpack'],
     });
-
     return config;
   },
   images: {
-    loader: 'akamai',
-    path: '',
+    disableStaticImages: true,
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    unoptimized: true,
   },
-  assetPrefix: isProd ? process.env.PUBLIC_URL : '',
+  assetPrefix: isProd ? process.env.PUBLIC_URL : undefined,
   async headers() {
     return [
       {

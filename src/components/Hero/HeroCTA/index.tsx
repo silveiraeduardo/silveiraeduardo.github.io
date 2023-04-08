@@ -1,11 +1,11 @@
 import clsx from 'clsx';
-import { useMemo, VFC } from 'react';
+import { useMemo, FC } from 'react';
 import Box from '~@system/Box';
 import ArrowCurve from '~/svg/arrow_curve.svg';
 import { root, arrowCurve, buttonLink } from './HeroCTA.css';
 import { useDesktop } from '~@system/utils/useDesktop';
 
-const HeroCTA: VFC = () => {
+const HeroCTA: FC = () => {
   const isDesktop = useDesktop();
   const { width, height } = useMemo(() => {
     return isDesktop

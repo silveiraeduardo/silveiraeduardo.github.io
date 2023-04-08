@@ -6,9 +6,25 @@ import * as classes from '../../Button/Button.css';
 
 export const root = style(
   {
-    marginBottom: '24px',
     height: '60px',
+    selectors: {
+      '&:hover:after': {
+        content: '💭',
+        position: 'relative',
+        fontSize: '24px',
+        bottom: '1rem',
+        right: '3rem',
+      },
+    },
     '@media': {
+      ...up(tokens.breakpoints.md, {
+        marginBottom: '28px',
+        selectors: {
+          '&:hover:after': {
+            right: '4rem',
+          },
+        },
+      }),
       ...up(tokens.breakpoints.lg, {
         vars: {
           padding: '27px',
@@ -17,13 +33,39 @@ export const root = style(
           justifyContent: 'flex-start',
           alignItems: 'flex-end',
         },
+        selectors: {
+          '&:hover:after': {
+            bottom: '2rem',
+          },
+        },
+      }),
+      ...up(tokens.breakpoints.xl, {
+        selectors: {
+          '&:hover:after': {
+            right: '4rem',
+          },
+        },
       }),
     },
   },
   'root',
 );
 
-export const buttonLink = style([classes.root, classes.variants.outlined], 'link');
+export const buttonLink = style(
+  [
+    classes.root,
+    classes.variants.outlined,
+    {
+      width: '178px',
+      '@media': {
+        ...up(tokens.breakpoints.md, {
+          width: '226px',
+        }),
+      },
+    },
+  ],
+  'link',
+);
 
 globalStyle(`a${buttonLink}`, {
   fontSize: '18px',
@@ -33,10 +75,10 @@ globalStyle(`a${buttonLink}`, {
   textDecoration: 'none',
   '@media': {
     ...colorSchema['@media'],
-    ...up(tokens.breakpoints.lg, {
+    ...up(tokens.breakpoints.md, {
       vars: {
-        fontSize: '24px',
-        lineHeight: '22px',
+        fontSize: '22px',
+        lineHeight: '20px',
       },
     }),
   },
@@ -48,7 +90,7 @@ export const arrowCurve = style(
     position: 'relative',
     bottom: '0',
     '@media': {
-      ...up(tokens.breakpoints.lg, {
+      ...up(tokens.breakpoints.md, {
         vars: {
           bottom: '20px',
         },
