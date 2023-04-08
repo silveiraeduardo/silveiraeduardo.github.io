@@ -1,4 +1,5 @@
 import { globalStyle, style, styleVariants } from '@vanilla-extract/css';
+import { up, tokens, down } from '~@styles';
 
 export const root = style(
   {
@@ -6,8 +7,9 @@ export const root = style(
     alignItems: 'center',
     justifyContent: 'flex-start',
     flexWrap: 'wrap',
-    width: '100%',
-    height: 676,
+    width: 'auto',
+    minHeight: 1080,
+    height: 1100,
     marginLeft: '4.5rem',
     marginRight: '4.5rem',
   },
@@ -87,7 +89,7 @@ export const timelineLogoContainerVariant = styleVariants(
 export const timeline = style(
   {
     display: 'inline-flex',
-    width: '99.9%',
+    width: '97%',
     height: 2,
     background: '#cccccc linear-gradient(90deg, rgba(204,204,204,1) 67%, rgba(51,51,51,1) 100%)',
     opacity: 1,
@@ -147,12 +149,162 @@ export const timelineMilestoneContainer = style(
     flexDirection: 'column',
     position: 'relative',
     right: '82px',
-    bottom: 178,
     margin: '4px',
     selectors: {
-      ['&:nth-child(3)']: {
-        bottom: 199,
+      ['&:nth-child(1)']: {
+        bottom: 173,
+        '@media': {
+          ...up(
+            tokens.breakpoints.md,
+            {
+              bottom: 183,
+            },
+            'and (prefers-color-scheme: light)',
+          ),
+          ...up(
+            tokens.breakpoints.md,
+            {
+              bottom: 178,
+            },
+            'and (prefers-color-scheme: dark)',
+          ),
+          ...down(
+            tokens.breakpoints.md,
+            {
+              bottom: 168,
+            },
+            'and (prefers-color-scheme: dark)',
+          ),
+        },
       },
+      ['&:nth-child(2)']: {
+        bottom: 163,
+        '@media': {
+          ...up(
+            tokens.breakpoints.md,
+            {
+              bottom: 173,
+            },
+            'and (prefers-color-scheme: light)',
+          ),
+          ...up(
+            tokens.breakpoints.md,
+            {
+              bottom: 178,
+            },
+            'and (prefers-color-scheme: dark)',
+          ),
+          ...down(
+            tokens.breakpoints.md,
+            {
+              bottom: 168,
+            },
+            'and (prefers-color-scheme: dark)',
+          ),
+        },
+      },
+      ['&:nth-child(3)']: {
+        bottom: 168,
+        '@media': {
+          ...up(
+            tokens.breakpoints.md,
+            {
+              bottom: 178,
+            },
+            'and (prefers-color-scheme: light)',
+          ),
+          ...up(
+            tokens.breakpoints.md,
+            {
+              bottom: 199,
+            },
+            'and (prefers-color-scheme: dark)',
+          ),
+          ...down(
+            tokens.breakpoints.md,
+            {
+              bottom: 189,
+            },
+            'and (prefers-color-scheme: dark)',
+          ),
+        },
+      },
+      ['&:nth-child(7)']: {
+        bottom: 147,
+        '@media': {
+          ...up(
+            tokens.breakpoints.md,
+            {
+              bottom: 157,
+            },
+            'and (prefers-color-scheme: light)',
+          ),
+          ...up(
+            tokens.breakpoints.md,
+            {
+              bottom: 178,
+            },
+            'and (prefers-color-scheme: dark)',
+          ),
+          ...down(
+            tokens.breakpoints.md,
+            {
+              bottom: 168,
+            },
+            'and (prefers-color-scheme: dark)',
+          ),
+        },
+      },
+      ['&:nth-child(8)']: {
+        bottom: 163,
+        '@media': {
+          ...up(
+            tokens.breakpoints.md,
+            {
+              bottom: 173,
+            },
+            'and (prefers-color-scheme: light)',
+          ),
+          ...up(
+            tokens.breakpoints.md,
+            {
+              bottom: 178,
+            },
+            'and (prefers-color-scheme: dark)',
+          ),
+          ...down(
+            tokens.breakpoints.md,
+            {
+              bottom: 168,
+            },
+            'and (prefers-color-scheme: dark)',
+          ),
+        },
+      },
+    },
+    bottom: 173,
+    '@media': {
+      ...up(
+        tokens.breakpoints.md,
+        {
+          bottom: 183,
+        },
+        'and (prefers-color-scheme: light)',
+      ),
+      ...up(
+        tokens.breakpoints.md,
+        {
+          bottom: 178,
+        },
+        'and (prefers-color-scheme: dark)',
+      ),
+      ...down(
+        tokens.breakpoints.md,
+        {
+          bottom: 168,
+        },
+        'and (prefers-color-scheme: dark)',
+      ),
     },
   },
   'milestone',
@@ -175,12 +327,32 @@ globalStyle(`${timelineMilestoneContainer}:nth-child(3) ${timelineImageContainer
 
 globalStyle(`${timelineMilestoneContainer}:nth-child(4) ${timelineImageContainer} ${timelineImage}`, {
   position: 'relative',
-  bottom: '63px',
+  bottom: 24,
 });
 
 globalStyle(`${timelineMilestoneContainer}:nth-child(4) ${timelineImageContainer} ${timelineImage}:hover`, {
   boxShadow: '0px 32px 0px 0px rgba(0,0,0,0.12)',
   marginBottom: 32,
+});
+
+globalStyle(`${timelineMilestoneContainer}:nth-child(5) ${timelineImageContainer} ${timelineImage}`, {
+  position: 'relative',
+  bottom: 112,
+});
+
+globalStyle(`${timelineMilestoneContainer}:nth-child(6) ${timelineImageContainer} ${timelineImage}`, {
+  position: 'relative',
+  bottom: 24,
+});
+
+globalStyle(`${timelineMilestoneContainer}:nth-child(7) ${timelineImageContainer} ${timelineImage}`, {
+  position: 'relative',
+  bottom: 97,
+});
+
+globalStyle(`${timelineMilestoneContainer}:nth-child(8) ${timelineImageContainer} ${timelineImage}`, {
+  position: 'relative',
+  bottom: 60,
 });
 
 const timelineHighlightBase = style(

@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { useCallback, useEffect, useState } from 'react';
 
 export function useMatchMedia(mediaQuery: string): boolean {
@@ -9,7 +8,7 @@ export function useMatchMedia(mediaQuery: string): boolean {
 
   useEffect(() => {
     setMatched(window?.matchMedia(mediaQuery)?.matches);
-  }, []);
+  }, [mediaQuery]);
 
   useEffect(() => {
     window?.matchMedia(mediaQuery).addEventListener('change', handleOnChange);

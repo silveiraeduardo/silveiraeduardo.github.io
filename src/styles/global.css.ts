@@ -93,12 +93,12 @@ globalStyle('#__next', {
   minHeight: '100vh',
   maxWidth: '100vw',
   margin: '0 auto',
-  padding: '27px 27px 0',
+  // padding: '27px 27px 0',
   '@media': {
     ...up(tokens.breakpoints.md, {
       vars: {
         maxWidth: '1855px',
-        padding: '122px 140px',
+        // padding: '122px 140px',
       },
     }),
   },

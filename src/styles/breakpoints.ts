@@ -7,17 +7,17 @@ export const breakpoints = {
   xl: '1536px',
 };
 
-export const up = <T = {}>(minWidth: string, cssProps: T) => {
+export const up = <T = {}>(minWidth: string, cssProps: T, conditional = '') => {
   return {
-    [`screen and (min-width: ${minWidth})`]: {
+    [`screen and (min-width: ${minWidth}) ${conditional}`]: {
       ...cssProps,
     },
   };
 };
 
-export const down = <T = {}>(maxWidth: string, cssProps: T) => {
+export const down = <T = {}>(maxWidth: string, cssProps: T, conditional = '') => {
   return {
-    [`screen and (max-width: ${maxWidth})`]: {
+    [`screen and (max-width: ${maxWidth}) ${conditional}`]: {
       ...cssProps,
     },
   };

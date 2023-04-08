@@ -22,6 +22,7 @@ export type TimelineList = {
   icon?: ReactNode;
   iconText?: 'UX Designer' | 'Graduação' | 'UX/UI Designer' | 'UX Lead' | 'Pós-graduação';
   logoVariant?: 'target' | 'contrast' | 'default';
+  className?: string;
 }[];
 
 const timeline: TimelineList = [
@@ -126,12 +127,12 @@ const timeline: TimelineList = [
     alt: 'riachuelo-2019',
     images: [
       {
-        src: '/images/timeline/Eduardo_Silveira_riachuelomais--2.png',
+        src: '/images/timeline/Eduardo_Silveira_simplifique.png',
         width: 173,
         height: 86,
       },
       {
-        src: '/images/timeline/Eduardo_Silveira_riachuelomais.png',
+        src: '/images/timeline/Eduardo_Silveira_simplifique--2.png',
         width: 173,
         height: 173,
       },
@@ -151,14 +152,14 @@ const timeline: TimelineList = [
     alt: 'riachuelo-2021',
     images: [
       {
-        src: '/images/timeline/Eduardo_Silveira_riachuelomais--2.png',
+        src: '/images/timeline/Eduardo_Silveira_ux_lead.png',
         width: 173,
-        height: 86,
+        height: 76,
       },
       {
-        src: '/images/timeline/Eduardo_Silveira_riachuelomais.png',
+        src: '/images/timeline/Eduardo_Silveira_ux_lead--2.png',
         width: 173,
-        height: 173,
+        height: 86,
       },
     ],
     year: 2021,
@@ -170,7 +171,7 @@ const timeline: TimelineList = [
     alt: 'espm',
     images: [
       {
-        src: '/images/timeline/Eduardo_Silveira_integracommerce.png',
+        src: '/images/timeline/Eduardo_Silveira_espm.png',
         width: 173,
         height: 123,
       },
@@ -203,8 +204,9 @@ function Timeline() {
               icon,
               iconText,
               logoVariant = 'default',
+              className,
             }) => (
-              <li className={classes.timelineMilestoneContainer} key={year}>
+              <li className={clsx(classes.timelineMilestoneContainer, className)} key={year}>
                 <div className={classes.timelineImageContainer}>
                   {images.map(({ src, width, height }) => (
                     <Image
@@ -237,28 +239,6 @@ function Timeline() {
               </li>
             ),
           )}
-
-          {/* <li className={classes.timelineHighlightVariants.default}>
-            <div className={classes.timelineSpot}></div>
-          </li>
-          <li className={classes.timelineHighlightVariants.default}>
-            <div className={classes.timelineSpot}></div>
-          </li>
-          <li className={classes.timelineHighlightVariants.target}>
-            <div className={classes.timelineSpot}></div>
-          </li>
-          <li className={classes.timelineHighlightVariants.default}>
-            <div className={classes.timelineSpot}></div>
-          </li>
-          <li className={classes.timelineHighlightVariants.current}>
-            <div className={classes.timelineSpot}></div>
-          </li>
-          <li className={classes.timelineHighlightVariants.default}>
-            <div className={classes.timelineSpot}></div>
-          </li>
-          <li className={classes.timelineHighlightVariants.default}>
-            <div className={classes.timelineSpot} ></div>
-          </li> */}
         </ul>
       </span>
     </div>

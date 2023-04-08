@@ -12,3 +12,7 @@ export * from './LaptopIcon';
 export { default as LaptopIcon } from './LaptopIcon';
 export * from './HistoryIcon';
 export { default as HistoryIcon } from './HistoryIcon';
+export * from './ArrowCurveRightIcon';
+export { default as ArrowCurveRightIcon } from './ArrowCurveRightIcon';
+export * from './ArrowDownIcon';
+export { default as ArrowDownIcon } from './ArrowDownIcon';

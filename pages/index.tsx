@@ -1,12 +1,13 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
 import { Layout } from '~@templates';
-import * as classes from './Home/Home.css';
-import ArrowIcon from '~@components/icons/ArrowIcon';
-import { Timeline } from '~@components';
+import * as classes from '~@styles/pages/Home.css';
+import { ArrowCurveRightIcon, ArrowDownIcon, Timeline } from '~@components';
+import clsx from 'clsx';
+import { useDesktop } from '~@system';
 
 const Home: NextPage = () => {
+  const isDesktop = useDesktop();
   return (
     <>
       <Head>
@@ -31,17 +32,13 @@ const Home: NextPage = () => {
         <meta property="og:image" content={`${process.env.NEXT_PUBLIC_URL}/apple-touch-icon.png`} />
       </Head>
       <Layout>
-        <section className={classes.root}>
-          {/* <div className={classes.background}>
-            <Image src="/images/Eduardo_Silveira_tragetoria.png" width={1497} height={380} alt="Tragetória" />
-          </div>
-          <ArrowIcon
-            className={classes.arrowDown}
-            variant="down"
-            width="35px"
-            height="35px"
-            viewBox="0 0 91.031 91.031"
-          /> */}
+        <section className={clsx(classes.root, classes.timeLineSection)}>
+          {isDesktop && (
+            <>
+              <ArrowCurveRightIcon className={clsx(classes.arrowCurve)} />
+              <ArrowDownIcon className={clsx(classes.arrow)} />
+            </>
+          )}
           <Timeline />
         </section>
       </Layout>

@@ -80,6 +80,7 @@ const nextConfig = {
     disableStaticImages: true,
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    unoptimized: true,
   },
   assetPrefix: isProd ? process.env.PUBLIC_URL : undefined,
   async headers() {

@@ -2,11 +2,10 @@ import clsx from 'clsx';
 import { useMemo, VFC } from 'react';
 
 import Typography from '~@system/Typography';
-import { circleContained, circleOutlined, line, problems, root } from './HeroTitle.css';
+import { circleContained, circleOutlined, problems, root } from './HeroTitle.css';
 import CircleOutlined from '~/svg/circle_outlined.svg';
 import CircleContained from '~/svg/circle_contained.svg';
 
-import Line from '~/svg/line.svg';
 import { useDesktop } from '~@system/utils/useDesktop';
 import ArrowIcon from '../../icons/ArrowIcon';
 
