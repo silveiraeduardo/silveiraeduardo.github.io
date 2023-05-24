@@ -10,7 +10,7 @@ export const root = style(
     flexDirection: 'column',
     flexWrap: 'wrap',
     maxWidth: '100vw',
-    marginBottom: '48px',
+    marginBottom: '-11px',
     padding: '27px 27px 0',
     '@media': {
       ...up(tokens.breakpoints.md, {

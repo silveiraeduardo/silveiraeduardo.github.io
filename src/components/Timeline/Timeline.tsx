@@ -36,7 +36,7 @@ const timeline: TimelineList = [
       },
     ],
     logo: {
-      src: '/images/logos/Eduardo_Silveira_integracommerce.png',
+      src: '/images/logos/Eduardo_Silveira_integracommerce-2.png',
       width: 120,
       height: 48,
     },
@@ -56,7 +56,7 @@ const timeline: TimelineList = [
       },
     ],
     logo: {
-      src: '/images/logos/Eduardo_Silveira_univas.png',
+      src: '/images/logos/Eduardo_Silveira_univas-2.png',
       width: 80,
       height: 28,
     },
@@ -177,7 +177,7 @@ const timeline: TimelineList = [
       },
     ],
     logo: {
-      src: '/images/logos/Eduardo_Silveira_espm.png',
+      src: '/images/logos/Eduardo_Silveira_espm-2.png',
       width: 80,
       height: 28,
     },
