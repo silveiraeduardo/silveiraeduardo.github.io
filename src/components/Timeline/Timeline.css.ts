@@ -72,6 +72,10 @@ export const timelineLogoContainerVariant = styleVariants(
     },
     target: {
       width: 104,
+      display: 'flex',
+      minHeight: '51px',
+      justifyContent: 'center',
+      alignItems: 'center',
       backgroundColor: '#F5F5F6',
       '@media': {
         '(prefers-color-scheme: dark)': {
@@ -178,12 +182,12 @@ export const timelineMilestoneContainer = style(
         },
       },
       ['&:nth-child(2)']: {
-        bottom: 163,
+        bottom: 173,
         '@media': {
           ...up(
             tokens.breakpoints.md,
             {
-              bottom: 173,
+              bottom: 183,
             },
             'and (prefers-color-scheme: light)',
           ),
@@ -204,7 +208,7 @@ export const timelineMilestoneContainer = style(
         },
       },
       ['&:nth-child(3)']: {
-        bottom: 168,
+        bottom: 173,
         '@media': {
           ...up(
             tokens.breakpoints.md,
@@ -224,6 +228,32 @@ export const timelineMilestoneContainer = style(
             tokens.breakpoints.md,
             {
               bottom: 189,
+            },
+            'and (prefers-color-scheme: dark)',
+          ),
+        },
+      },
+      ['&:nth-child(5)']: {
+        bottom: 174,
+        '@media': {
+          ...up(
+            tokens.breakpoints.md,
+            {
+              bottom: 184,
+            },
+            'and (prefers-color-scheme: light)',
+          ),
+          ...up(
+            tokens.breakpoints.md,
+            {
+              bottom: 178,
+            },
+            'and (prefers-color-scheme: dark)',
+          ),
+          ...down(
+            tokens.breakpoints.md,
+            {
+              bottom: 168,
             },
             'and (prefers-color-scheme: dark)',
           ),
@@ -256,12 +286,12 @@ export const timelineMilestoneContainer = style(
         },
       },
       ['&:nth-child(8)']: {
-        bottom: 163,
+        bottom: 173,
         '@media': {
           ...up(
             tokens.breakpoints.md,
             {
-              bottom: 173,
+              bottom: 183,
             },
             'and (prefers-color-scheme: light)',
           ),

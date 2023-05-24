@@ -13,7 +13,7 @@ export const article = style(
           maxWidth: '974px',
           fontSize: '26px',
           lineHeight: '36px',
-          marginTop: '61px',
+          marginTop: '60px',
         },
       }),
     },

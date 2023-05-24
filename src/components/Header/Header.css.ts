@@ -16,8 +16,8 @@ export const root = style(
     padding: '27px 27px 0',
     '@media': {
       ...up(tokens.breakpoints.md, {
-        marginBottom: '64px',
-        padding: '122px 140px',
+        marginBottom: 0,
+        padding: '122px 140px 60px 140px',
       }),
     },
   },
